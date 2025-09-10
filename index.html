@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Manifest para PWA -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Icono para iOS (PWA en iPhone/iPad) -->
+<link rel="apple-touch-icon" sizes="180x180" href="ico/heart.png">
+<!-- Favicon para navegadores de escritorio -->
+<link rel="icon" type="image/png" sizes="32x32" href="ico/heart.png">
+<link rel="icon" type="image/png" sizes="16x16" href="ico/heart.png">
+<!-- Favicon general (backup) -->
+<link rel="icon" href="ico/heart.png" type="image/png">
+<!-- Tema para la barra de estado -->
+<meta name="theme-color" content="#ff3366">
+<!-- Metadatos básicos -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Título -->
+<title>App Para Tiu</title>
+<!-- Tipografía -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<!-- Estilos -->
+<link rel="stylesheet" href="style.css">
+<!-- Animaciones AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+<body>
+    <div id="bubbles-media"></div>
+    <div id="bubbles-text"></div>
+
+  <div class="container">
+    <h1>💖 Nuestro Amor 💖</h1>
+
+    <div class="counter">
+      <h2>Días desde que nos conocimos:</h2>
+      <p id="main-count"></p>
+    </div>
+
+    <div class="milestones">
+      <h2>Hitos importantes:</h2>
+      <ul id="milestones-list"></ul>
+    </div>
+    <div class="next-milestone">
+  <h2>Próximo Hito:</h2>
+  <p id="next-countdown"></p>
+  
+</div>
+<div id="milestone-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeMilestoneModal()">&times;</span>
+    <h3 id="milestone-title"></h3>
+    <p id="milestone-date"></p>
+    <p id="milestone-info"></p>
+    <p id="milestone-description"></p> <!-- aquí va lo detallado -->
+  </div>
+</div>
+    <div class="gallery-section">
+        <!-- Modal para imagen ampliada -->
+<h2>Nuestros recuerdos 📸</h2>
+<div class="gallery">
+  <div class="photo" onclick="openModal('img/img1.png', 'Primera selfie 💕')">
+    <img src="img/img1.png" alt="Recuerdo 1">
+    <p class="description">10/08/2025 — Primera selfie 💕</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img2.png', 'Pvp loco')">
+    <img src="img/img2.png" alt="Recuerdo 2">
+    <p class="description">15/08/2025 — Pvp loco </p>
+  </div>
+  <div class="photo" onclick="openModal('img/img3.png', 'Noche de fri')">
+    <img src="img/img3.png" alt="Recuerdo 3">
+    <p class="description">18/08/2025 — Noche de fri </p>
+  </div>
+  <div class="photo" onclick="openModal('img/img4.png', 'Dia de locura 🙂‍↕️')">
+    <img src="img/img4.png" alt="Recuerdo 4">
+    <p class="description">21/08/2025 — Dia de locura 🙂‍↕️</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img5.png', 'A media humillada👻')">
+    <img src="img/img5.png" alt="Recuerdo 5">
+    <p class="description">23/08/2025 — A media humillada😹👻</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img6.png', 'Pvp Facil')">
+    <img src="img/img6.png" alt="Recuerdo 6">
+    <p class="description">30/08/2025 — otro pvp🙂‍↕️</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img7.png', 'caraa de boot😹')">
+    <img src="img/img7.png" alt="Recuerdo 7">
+    <p class="description">30/08/2025 — bot😹</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img8.png', 'Fotito a medio pvp')">
+    <img src="img/img8.png" alt="Recuerdo 8">
+    <p class="description">31/08/2025 — Fotito a medio pvp</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img11.png', 'Uyyyy')">
+    <img src="img/img11.png" alt="Recuerdo 9">
+    <p class="description">02/09/2025 — Uyyyy</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img12.png', 'Fotito antes de humillarteeeeeee')">
+    <img src="img/img12.png" alt="Recuerdo 12">
+    <p class="description">02/09/2025 — Fotito antes de humillarteeeeeee</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img10.png', 'Fotito antes de humillarteeeeeee')">
+    <img src="img/img10.png" alt="Recuerdo 10">
+    <p class="description">02/09/2025 — Fotito antes de humillarteeeeeee</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img13.png', 'Fotito antes de humillarteeeeeee')">
+    <img src="img/img13.png" alt="Recuerdo 13">
+    <p class="description">02/09/2025 — Fotito antes de humillarteeeeeee</p>
+  </div>
+  <div class="photo" onclick="openModal('img/img14.png', 'Fotito antes de humillarteeeeeee')">
+    <img src="img/img14.png" alt="Recuerdo 14">
+    <p class="description">02/09/2025 — Fotito antes de humillarteeeeeee</p>
+  </div>
+    <div class="photo" onclick="openModal('img/img15.png', 'Fotito antes de humillarteeeeeee')">
+    <img src="img/img15.png" alt="Recuerdo 15">
+    <p class="description">02/09/2025 — Ah? 👀</p>
+  </div>
+</div>
+
+<button onclick=" shareCounter()" class="add-btn">📤 Compartir</button>
+
+
+
+<!-- Modal (DEBE ESTAR FUERA de .gallery) -->
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img id="modal-img" class="modal-content" alt="">
+  <div id="modal-caption" class="caption"></div>
+</div>
+
+<div class="theme-toggle-wrapper">
+  <button id="theme-toggle" class="theme-toggle">
+    <span class="icon">🌙</span>
+    <span class="label">Modo oscuro</span>
+  </button>
+</div>
+</div>
+  </div>
+  <br>
+  <br>
+<footer>
+  <span>Creado por - 
+    <a href="https://www.instagram.com/stories/highlights/17915692614174862/">Jioo Cz</a>
+  </span>
+</footer>
+
+  <script src="app.js" defer></script>
+  <script src="imgs.js"></script>
+  <script src="frases.js"></script>
+ 
+
+</body>
+</html>
